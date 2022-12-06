@@ -17,3 +17,10 @@ export async function postListItem(listItem) {
   );
   return data.rows[0];
 }
+
+export async function deleteList() {
+  await pool.query(
+    'TRUNCATE TABLE  shopping;'
+  )
+  return 'Shopping table deleted'
+}
