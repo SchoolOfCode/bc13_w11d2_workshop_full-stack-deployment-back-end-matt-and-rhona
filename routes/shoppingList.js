@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
 
 router.delete("/", async (req, res) => {
   const result = await deleteList();
-  rex.json({success: true, payload: result})
+  res.json({success: true, payload: result})
 })
 
 export default router;
